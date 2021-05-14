@@ -67,6 +67,15 @@ const useStyles = makeStyles((theme: Theme) => ({
     selectEmpty: {
         marginTop: theme.spacing(2),
     },
+    searchButton : {
+        background : 'linear-gradient(90deg, rgb(241,75,106), rgb(150,51,69))',
+        padding : '4px 15px',
+        borderRadius : 20,
+        '&:hover' : {
+            background : "#f14b6a",
+            //backgroundColor : "green" 
+        }
+    },
 }));
 
 const FilterComponent = () => {
@@ -95,7 +104,7 @@ const FilterComponent = () => {
                 </Grid>
                 
             </Grid>
-            <Box boxShadow={24} style={{display : "flex", width:"100%", height:"84%", backgroundColor:"white", borderColor:"#283949", borderStyle:'solid', borderWidth:2, borderBottomLeftRadius:"25px", borderBottomRightRadius:"25px", borderTopRightRadius:"25px", overflow:"hidden"}}>
+            <Box boxShadow={24} flexDirection="column" style={{display : "flex", width:"100%", height:"84%", backgroundColor:"white", borderColor:"#283949", borderStyle:'solid', borderWidth:2, borderBottomLeftRadius:"25px", borderBottomRightRadius:"25px", borderTopRightRadius:"25px", overflow:"hidden"}}>
                 <Grid shadows container direction="row" justify="flex-start" alignItems="flex-start" style={{display : "flex", }}>
                         <Grid item md={3} xs={6}  >
                             
@@ -140,6 +149,26 @@ const FilterComponent = () => {
                         </Grid>
                         <Grid item md={3} xs={6} >
                             <FormControl className={classes.formControl}>
+                                <InputLabel id="demo-simple-select-helper-label">Seller Type</InputLabel>
+                                <Select
+                                labelId="demo-simple-select-helper-label"
+                                id="demo-simple-select-helper"
+                                value={age}
+                                onChange={handleChange}
+                                >
+                                <MenuItem value="">
+                                    <em>None</em>
+                                </MenuItem>
+                                <MenuItem value={10}>All</MenuItem>
+                                <MenuItem value={20}>Dealer</MenuItem>
+                                <MenuItem value={30}>Certified pre-owned</MenuItem>
+                                <MenuItem value={30}>Owner</MenuItem>
+                                </Select>
+                                
+                            </FormControl>
+                        </Grid>
+                        <Grid item md={3} xs={6} >
+                            <FormControl className={classes.formControl}>
                                 <InputLabel id="demo-simple-select-helper-label">Min Price</InputLabel>
                                 <Select
                                 labelId="demo-simple-select-helper-label"
@@ -150,10 +179,10 @@ const FilterComponent = () => {
                                 <MenuItem value="">
                                     <em>None</em>
                                 </MenuItem>
-                                <MenuItem value={10}>Totyota</MenuItem>
-                                <MenuItem value={20}>Skoda</MenuItem>
-                                <MenuItem value={30}>Audi</MenuItem>
-                                <MenuItem value={30}>Honda</MenuItem>
+                                <MenuItem value={10}>30 000</MenuItem>
+                                <MenuItem value={20}>60 000</MenuItem>
+                                <MenuItem value={30}>100 000</MenuItem>
+                                <MenuItem value={30}>150 000</MenuItem>
                                 </Select>
                                 
                             </FormControl>
@@ -170,14 +199,66 @@ const FilterComponent = () => {
                                 <MenuItem value="">
                                     <em>None</em>
                                 </MenuItem>
-                                <MenuItem value={10}>Totyota</MenuItem>
-                                <MenuItem value={20}>Skoda</MenuItem>
-                                <MenuItem value={30}>Audi</MenuItem>
-                                <MenuItem value={30}>Honda</MenuItem>
+                                <MenuItem value={10}>150 000</MenuItem>
+                                <MenuItem value={20}>200 000</MenuItem>
+                                <MenuItem value={30}>300 000</MenuItem>
+                                <MenuItem value={30}>600 000</MenuItem>
                                 </Select>
                                 
                             </FormControl>
                         </Grid>
+                        <Grid item md={3} xs={6} >
+                            <FormControl className={classes.formControl}>
+                                <InputLabel id="demo-simple-select-helper-label">Min Year</InputLabel>
+                                <Select
+                                labelId="demo-simple-select-helper-label"
+                                id="demo-simple-select-helper"
+                                value={age}
+                                onChange={handleChange}
+                                >
+                                <MenuItem value="">
+                                    <em>None</em>
+                                </MenuItem>
+                                <MenuItem value={10}>1970</MenuItem>
+                                <MenuItem value={20}>1980</MenuItem>
+                                <MenuItem value={30}>2000</MenuItem>
+                                <MenuItem value={30}>2005</MenuItem>
+                                </Select>
+                                
+                            </FormControl>
+                        </Grid>
+                        <Grid item md={3} xs={6} >
+                            <FormControl className={classes.formControl}>
+                                <InputLabel id="demo-simple-select-helper-label">Max Year</InputLabel>
+                                <Select
+                                labelId="demo-simple-select-helper-label"
+                                id="demo-simple-select-helper"
+                                value={age}
+                                onChange={handleChange}
+                                >
+                                <MenuItem value="">
+                                    <em>None</em>
+                                </MenuItem>
+                                <MenuItem value={10}>2000</MenuItem>
+                                <MenuItem value={20}>2005</MenuItem>
+                                <MenuItem value={30}>2010</MenuItem>
+                                <MenuItem value={30}>2020</MenuItem>
+                                </Select>
+                                
+                            </FormControl>
+                        </Grid>
+                </Grid>
+                <Grid container >
+                    <Grid item >
+                        
+                    </Grid>
+                    <Grid item xs={12} md={3} >
+                        <Box display="flex" color="white" justifyContent="center" className={classes.searchButton} >
+                            <Typography  >
+                                SEARCH
+                            </Typography>
+                        </Box>
+                    </Grid>
                 </Grid>
             </Box>
         </div>

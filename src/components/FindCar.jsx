@@ -40,7 +40,8 @@ const useStyles = makeStyles((theme: Theme) => ({
       position:"absolute",
       top:"150px",
       left:"200px"
-  }
+  },
+  
 }));
 
 export default function FinCar() {
