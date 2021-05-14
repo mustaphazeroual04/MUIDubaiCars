@@ -7,6 +7,12 @@ import {
     Icon
 } from '@material-ui/core';
 import dubiCarsLogo from "../images/logo.svg";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 
 const useStyles = makeStyles((theme) =>
@@ -138,12 +144,12 @@ export default function AppMenu() {
             </Box>
             <Box className={classes.menuItemContainer}>
                 <Typography variant="h6" className={classes.menuItem}>
-                    About Us
+                    <Link to="/findCar">About Us </Link>
                 </Typography>
             </Box>
             <Box className={classes.menuItemContainer}>
                 <Typography variant="h6" className={classes.menuItem}>
-                    LOGIN
+                    <Link to="/login">LOGIN </Link>
                 </Typography>
             </Box>
         </Box>
