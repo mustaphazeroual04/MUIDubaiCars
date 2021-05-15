@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     
     container : {
         width:"50%",
-        height:"300px",
+        //height:"300px",
         backgroundColor:"transparent",
         //paddingLeft:"20px"
         //margin:"auto"
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         borderLefttColor:"#283949", 
         flexDirection:"row", 
         width:"55%", 
-        height:"16%", 
+        height:"40px", 
         borderTopLeftRadius:"25px", 
         borderTopRightRadius:"25px", 
         overflow:"hidden",
@@ -69,10 +69,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     searchButton : {
         background : 'linear-gradient(90deg, rgb(241,75,106), rgb(150,51,69))',
-        padding : '4px 15px',
+        //padding : '4px 15px',
         borderRadius : 20,
+        height : "40px",
+        cursor : "pointer",
+        //width:"160px",
         '&:hover' : {
             background : "#f14b6a",
+            
             //backgroundColor : "green" 
         }
     },
@@ -104,7 +108,7 @@ const FilterComponent = () => {
                 </Grid>
                 
             </Grid>
-            <Box boxShadow={24} flexDirection="column" style={{display : "flex", width:"100%", height:"84%", backgroundColor:"white", borderColor:"#283949", borderStyle:'solid', borderWidth:2, borderBottomLeftRadius:"25px", borderBottomRightRadius:"25px", borderTopRightRadius:"25px", overflow:"hidden"}}>
+            <Box boxShadow={24} flexDirection="column" style={{display : "flex", paddingBottom:"10px", width:"100%", height:"84%", backgroundColor:"white", borderColor:"#283949", borderStyle:'solid', borderWidth:2, borderBottomLeftRadius:"25px", borderBottomRightRadius:"25px", borderTopRightRadius:"25px", overflow:"hidden"}}>
                 <Grid shadows container direction="row" justify="flex-start" alignItems="flex-start" style={{display : "flex", }}>
                         <Grid item md={3} xs={6}  >
                             
@@ -252,8 +256,8 @@ const FilterComponent = () => {
                     <Grid item >
                         
                     </Grid>
-                    <Grid item xs={12} md={3} >
-                        <Box display="flex" color="white" justifyContent="center" className={classes.searchButton} >
+                    <Grid item xs={12} md={2} style={{}} >
+                        <Box display="flex" color="white" justifyContent="center" alignItems="center" className={classes.searchButton} >
                             <Typography  >
                                 SEARCH
                             </Typography>

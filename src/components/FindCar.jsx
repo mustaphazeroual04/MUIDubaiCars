@@ -6,6 +6,8 @@ import { Tabs, Tab, Box, Typography, Grid } from '@material-ui/core';
 import {TabContext, TabList, TabPanel } from '@material-ui/lab';
 //import TabPanel from '@material-ui/lab/TabPanel';
 import FilterComponent from './filterComponent';
+import LatestPremCars from './LatestPremCars';
+
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
@@ -55,9 +57,11 @@ export default function FinCar() {
   return (
     
       
-    <Box  alignItems="center" flexDirection="column" style={{ display:"flex", minHeight: '100vh', backgroundColor:"darkcyan", width:"100%" }} >
+    <Box  alignItems="center" flexDirection="column" style={{ display:"flex", minHeight: '100vh', backgroundColor:"white", width:"100%" }} >
         <Typography>Buy, Sell, Smile with Dubi Cars</Typography>
         <FilterComponent ></FilterComponent>
+        <Box width="100%" height="250px" style={{}} ></Box>
+        <LatestPremCars></LatestPremCars>
     </Box>
 
     
